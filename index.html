@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="es" style=""><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Taquitos Mayra | Taquitos calientitos, ricos y hechos al momento</title>
+<meta content="Disfruta Taquitos Mayra, preparados al momento con sabor casero. Pedidos al 864 132 3345." name="description"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@600;700&amp;family=Montserrat:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "secondary-fixed-dim": "#c8c6c4",
+                        "on-secondary-container": "#636261",
+                        "surface-container-highest": "#e5e2e1",
+                        "on-primary-fixed": "#1b1c1a",
+                        "on-primary": "#ffffff",
+                        "surface-container-low": "#f7f3f2",
+                        "on-secondary-fixed-variant": "#474745",
+                        "on-tertiary-fixed-variant": "#484647",
+                        "surface-container": "#f1edec",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-fixed": "#e6e1e2",
+                        "on-background": "#1c1b1b",
+                        "primary-fixed": "#e4e2de",
+                        "surface-dim": "#ddd9d8",
+                        "on-tertiary-container": "#757374",
+                        "secondary": "#5f5e5d",
+                        "surface-container-lowest": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "surface-container-high": "#ebe7e6",
+                        "secondary-fixed": "#e5e2e0",
+                        "surface-tint": "#5e5e5c",
+                        "on-error": "#ffffff",
+                        "on-tertiary-fixed": "#1c1b1c",
+                        "surface-variant": "#e5e2e1",
+                        "background": "#fcf8f7",
+                        "on-error-container": "#93000a",
+                        "on-primary-container": "#747471",
+                        "outline": "#767872",
+                        "surface": "#fcf8f7",
+                        "primary-fixed-dim": "#c8c6c3",
+                        "error": "#ba1a1a",
+                        "tertiary": "#605e5f",
+                        "primary-container": "#fdfbf7",
+                        "on-primary-fixed-variant": "#474744",
+                        "inverse-primary": "#c8c6c3",
+                        "tertiary-container": "#fffafb",
+                        "on-secondary": "#ffffff",
+                        "inverse-surface": "#313030",
+                        "surface-bright": "#fcf8f7",
+                        "secondary-container": "#e2dfdd",
+                        "tertiary-fixed-dim": "#c9c5c6",
+                        "on-secondary-fixed": "#1c1c1b",
+                        "primary": "#5e5e5c",
+                        "outline-variant": "#c6c7c0",
+                        "on-surface-variant": "#454742",
+                        "on-surface": "#1c1b1b",
+                        "inverse-on-surface": "#f4f0ef",
+                        
+                        "brand-coral": "#E24C38",
+                        "brand-coffee": "#3E2723",
+                        "brand-cream": "#FDFBF7",
+                        "brand-leaf": "#7CB342"
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.25rem",
+                        lg: "0.5rem",
+                        xl: "0.75rem",
+                        full: "9999px",
+                        "menu": "20px"
+                    },
+                    spacing: {
+                        xl: "80px",
+                        "margin-mobile": "16px",
+                        xs: "4px",
+                        gutter: "20px",
+                        md: "24px",
+                        "margin-desktop": "64px",
+                        lg: "48px",
+                        sm: "12px",
+                        base: "8px"
+                    },
+                    fontFamily: {
+                        "display-lg-mobile": ["Epilogue"],
+                        "headline-md": ["Epilogue"],
+                        "display-lg": ["Epilogue"],
+                        "headline-sm": ["Epilogue"],
+                        "body-lg": ["Montserrat"],
+                        "label-md": ["Montserrat"],
+                        "body-md": ["Montserrat"]
+                    },
+                    fontSize: {
+                        "display-lg-mobile": ["36px", { lineHeight: "1.2", fontWeight: "700" }],
+                        "headline-md": ["32px", { lineHeight: "1.3", fontWeight: "600" }],
+                        "display-lg": ["48px", { lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "700" }],
+                        "headline-sm": ["24px", { lineHeight: "1.4", fontWeight: "600" }],
+                        "body-lg": ["18px", { lineHeight: "1.6", fontWeight: "400" }],
+                        "label-md": ["14px", { lineHeight: "1", letterSpacing: "0.05em", fontWeight: "600" }],
+                        "body-md": ["16px", { lineHeight: "1.6", fontWeight: "400" }]
+                    },
+                    boxShadow: {
+                        'ambient': '0 10px 25px -5px rgba(62, 39, 35, 0.08), 0 8px 10px -6px rgba(62, 39, 35, 0.05)',
+                        'ambient-lg': '0 20px 25px -5px rgba(62, 39, 35, 0.1), 0 10px 10px -5px rgba(62, 39, 35, 0.06)'
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { background-color: theme('colors.brand-cream'); color: theme('colors.brand-coffee'); }
+        .bg-paper-texture {
+            background-color: theme('colors.brand-cream');
+        }
+        .brush-divider {
+            height: 12px;
+            background: rgba(62, 39, 35, 0.1);
+        }
+        .card-hover:hover { transform: translateY(-4px); box-shadow: theme('boxShadow.ambient-lg'); }
+        .image-zoom-container { overflow: hidden; }
+        .image-zoom-container img { transition: transform 0.5s ease; }
+        .card-hover:hover .image-zoom-container img { transform: scale(1.05); }
+        .fade-in-section { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; }
+        .fade-in-section.is-visible { opacity: 1; transform: none; }
+        
+        /* Cart Drawer Transitions */
+        #cart-overlay.hidden { display: none; }
+        #cart-drawer.translate-x-full { transform: translateX(100%); }
+    </style>
+</head>
+<body class="font-body-md text-body-md bg-brand-cream bg-paper-texture antialiased selection:bg-brand-coral selection:text-white">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-brand-cream/90 backdrop-blur-md shadow-sm border-b border-brand-coffee/5 py-4 transition-all duration-300" id="navbar">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-mobile md:px-margin-desktop py-base max-w-[1280px] mx-auto w-full">
+<a class="font-display-lg text-headline-sm text-brand-coral tracking-tight mb-4 md:mb-0" href="#"><img alt="Taquitos Mayra Logo" class="h-12 md:h-16 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOe6g32NnyrsRFpsOizWb6fGSWxe2uxgSHIRmOgY-1MXLuft4--XQY-gx6Ijo3QJC0qrt0XvNolocB9Cvl2CKKte33lRrWix5N4K3IyhKOMXmHESvSn08Dt21LTSTfRmeB61Y1ivhXiJlVPdlKcEzycaQZhPLC0EqU_Vkr7OvAhIKRvqCdjxGEQaMa2_Rv6fMWxRcUMiHmWnIREX-EhqX8InyqHJpUaahtf8q1HvDb9tTlCNf2-EvqeURq_RZkRQFBf4I"/></a>
+<div class="hidden md:flex gap-6 items-center flex-wrap justify-center flex-1 ml-8">
+<a class="text-brand-coffee hover:text-brand-coral transition-colors font-label-md" href="#menu">Menú</a>
+<a class="text-brand-coffee hover:text-brand-coral transition-colors font-label-md" href="#frutas">Nuestro Sabor</a>
+<a class="text-brand-coffee hover:text-brand-coral transition-colors font-label-md" href="#ubicacion">Ubicación</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="relative flex items-center justify-center p-2 text-brand-coffee hover:text-brand-coral transition-colors" onclick="toggleCart()">
+<span class="material-symbols-outlined text-3xl">shopping_cart</span>
+<span class="absolute top-0 right-0 bg-brand-coral text-white text-[10px] font-bold h-5 w-5 rounded-full flex items-center justify-center border-2 border-brand-cream hidden" id="cart-count-badge">0</span>
+</button>
+</div>
+</div>
+</nav>
+<!-- Cart Overlay and Drawer -->
+<div class="fixed inset-0 bg-black/50 z-[60] hidden transition-opacity" id="cart-overlay" onclick="toggleCart()"></div>
+<div class="fixed top-0 right-0 w-full h-full bg-surface-container-lowest z-[70] shadow-2xl transform translate-x-full transition-transform duration-300 flex flex-col md:w-[350px]" id="cart-drawer">
+<div class="flex items-center justify-between p-6 border-b border-brand-coffee/10">
+<h2 class="font-headline-sm text-brand-coffee flex items-center gap-2">
+<span class="material-symbols-outlined text-brand-coral">shopping_cart</span>
+            Tu Pedido
+        </h2>
+<button class="text-brand-coffee/50 hover:text-brand-coral transition-colors" onclick="toggleCart()">
+<span class="material-symbols-outlined">close</span>
+</button>
+<button class="text-brand-leaf hover:text-brand-coral transition-colors font-label-md flex items-center gap-1 ml-auto mr-4" onclick="toggleCart()"><span class="material-symbols-outlined text-sm">arrow_back</span> Seguir comprando</button></div>
+<div class="flex-1 overflow-y-auto p-6 space-y-6" id="cart-items-container">
+<!-- Cart Items will be injected here -->
+<div class="text-center text-brand-coffee/60 py-12 flex flex-col items-center gap-4" id="empty-cart-message">
+<span class="material-symbols-outlined text-5xl opacity-20">remove_shopping_cart</span>
+<p class="font-body-md">Tu carrito está vacío</p>
+</div>
+</div><div class="px-6 pb-6 space-y-6 border-t border-brand-coffee/5 pt-6">
+<div class="space-y-4">
+<h3 class="font-label-md text-brand-coffee uppercase tracking-wider text-xs">Método de Entrega</h3>
+<div class="grid grid-cols-2 gap-2 p-1 bg-surface-container-low rounded-xl">
+<button class="py-2 px-4 rounded-lg font-label-md transition-all bg-white shadow-sm text-brand-coral" id="btn-pickup" onclick="setDeliveryMethod('pickup')">Pasar por él</button>
+<button class="py-2 px-4 rounded-lg font-label-md transition-all text-brand-coffee/60" id="btn-delivery" onclick="setDeliveryMethod('delivery')">A domicilio</button>
+</div>
+</div>
+<div class="space-y-4" id="delivery-form">
+<div class="space-y-3" id="pickup-fields">
+<input class="w-full px-4 py-3 rounded-xl border-brand-coffee/10 focus:border-brand-coral focus:ring-brand-coral font-body-md text-sm" id="pickup-name" placeholder="Nombre" type="text"/>
+<input class="w-full px-4 py-3 rounded-xl border-brand-coffee/10 focus:border-brand-coral focus:ring-brand-coral font-body-md text-sm" id="pickup-phone" placeholder="Teléfono" type="tel"/>
+</div>
+<div class="space-y-3 hidden" id="delivery-fields">
+<input class="w-full px-4 py-3 rounded-xl border-brand-coffee/10 focus:border-brand-coral focus:ring-brand-coral font-body-md text-sm" id="del-name" placeholder="Nombre de quién recibe" type="text"/>
+<input class="w-full px-4 py-3 rounded-xl border-brand-coffee/10 focus:border-brand-coral focus:ring-brand-coral font-body-md text-sm" id="del-phone" placeholder="Teléfono" type="tel"/>
+<div class="grid grid-cols-2 gap-3">
+<input class="w-full px-4 py-3 rounded-xl border-brand-coffee/10 focus:border-brand-coral focus:ring-brand-coral font-body-md text-sm" id="del-street" placeholder="Calle" type="text"/>
+<input class="w-full px-4 py-3 rounded-xl border-brand-coffee/10 focus:border-brand-coral focus:ring-brand-coral font-body-md text-sm" id="del-number" placeholder="Número" type="text"/>
+</div>
+<input class="w-full px-4 py-3 rounded-xl border-brand-coffee/10 focus:border-brand-coral focus:ring-brand-coral font-body-md text-sm" id="del-between" placeholder="Entre calles" type="text"/>
+<input class="w-full px-4 py-3 rounded-xl border-brand-coffee/10 focus:border-brand-coral focus:ring-brand-coral font-body-md text-sm" id="del-ref" placeholder="Referencia (opcional)" type="text"/>
+</div>
+</div>
+</div>
+<div class="p-6 bg-surface-container-low border-t border-brand-coffee/10"><div class="text-center mb-4"><button class="text-brand-coffee/60 hover:text-brand-coral font-label-md transition-colors underline decoration-brand-coral/30 underline-offset-4" onclick="toggleCart()">¿Deseas agregar algo más? Seguir comprando</button></div>
+<div class="flex justify-between items-center mb-2 hidden" id="delivery-cost-row">
+<span class="font-body-md text-brand-coffee/70">Costo de envío:</span>
+<span class="font-label-md text-brand-coffee">$15</span>
+</div><div class="flex justify-between items-center mb-6">
+<span class="font-headline-sm text-brand-coffee">Total:</span>
+<span class="font-display-lg-mobile text-brand-coral" id="cart-total">$0</span>
+</div>
+<button class="w-full flex items-center justify-center bg-brand-coral text-white font-label-md rounded-[12px] py-4 px-6 hover:brightness-110 transition-all gap-2 disabled:opacity-50 disabled:cursor-not-allowed" disabled="" id="checkout-btn" onclick="checkoutWhatsApp()">
+<span class="material-symbols-outlined">send</span>
+            Enviar Pedido por WhatsApp
+        </button>
+</div>
+</div>
+<!-- Bottom Navigation Bar for Mobile -->
+<nav class="fixed bottom-0 w-full z-40 bg-surface-container-highest shadow-sm flex justify-around items-center py-2 md:hidden">
+<a class="flex flex-col items-center p-2 text-brand-coffee hover:text-brand-coral" href="#menu">
+<span class="material-symbols-outlined" data-icon="restaurant_menu">restaurant_menu</span>
+<span class="text-[10px] mt-1 font-label-md">Menú</span>
+</a>
+<a class="flex flex-col items-center p-2 text-brand-coffee hover:text-brand-coral" href="#nosotros">
+<span class="material-symbols-outlined" data-icon="icecream">icecream</span>
+<span class="text-[10px] mt-1 font-label-md">Nosotros</span>
+</a>
+<a class="flex flex-col items-center p-2 text-brand-coffee hover:text-brand-coral" href="#ubicacion">
+<span class="material-symbols-outlined" data-icon="location_on">location_on</span>
+<span class="text-[10px] mt-1 font-label-md">Ubicacion</span>
+</a>
+</nav>
+<main class="pt-[100px] md:pt-[120px] pb-24 md:pb-0">
+<!-- Hero Section -->
+<section class="relative min-h-[70vh] flex items-center px-margin-mobile md:px-margin-desktop py-lg max-w-[1280px] mx-auto fade-in-section is-visible">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center w-full">
+<div class="order-2 md:order-1 z-10 flex flex-col items-start space-y-6">
+<h1 class="font-display-lg-mobile md:font-display-lg text-brand-coral leading-tight">
+                        Taquitos Mayra
+                    </h1>
+<p class="font-headline-sm md:font-headline-md text-brand-coffee max-w-lg">
+                        ¡Calientitos, ricos y hechos al momento!
+                    </p>
+<p class="font-body-lg text-brand-coffee/80 max-w-md">
+                        Autenticos de casa con todo el sabor hasta su Mesa. Experecia y tradicion en cada Taquito!.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4 mt-4 w-full sm:w-auto relative">
+<!--<button class="inline-flex items-center justify-center bg-brand-coral text-white font-label-md rounded-[12px] px-8 py-4 hover:shadow-ambient-lg transition-all hover:-translate-y-1 w-full sm:w-auto animate-pulse shadow-[0_0_15px_rgba(226,76,56,0.5)] hover:brightness-110 hover:scale-105" onclick="toggleCart()">
+<span class="material-symbols-outlined mr-2">shopping_bag</span> Ver mi pedido
+</button>-->
+<a class="inline-flex items-center justify-center bg-transparent border-2 border-brand-coffee text-brand-coffee font-label-md rounded-[12px] px-8 py-4 hover:bg-brand-coffee/5 transition-all w-full sm:w-auto" href="#menu">
+                            Ver Menú
+                        </a>
+</div>
+</div>
+<div class="order-1 md:order-2 w-full h-[300px] md:h-[500px] rounded-3xl overflow-hidden shadow-ambient relative">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-1000 hover:scale-105" style="background-image: url('img/taquitos.jpg')"></div>
+</div>
+</div>
+<!-- Decorative stroke -->
+<div class="absolute bottom-0 left-0 w-full brush-divider"></div>
+</section>
+<!-- Benefits Bar -->
+<section class="bg-white py-12 shadow-sm relative z-20">
+<div class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-2 md:grid-cols-4 gap-8">
+<div class="flex flex-col items-center text-center space-y-3">
+<span class="material-symbols-outlined text-brand-coral text-4xl" data-icon="local_fire_department" data-weight="fill" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+<span class="font-label-md text-brand-coffee">Hechos al momento</span>
+</div>
+<div class="flex flex-col items-center text-center space-y-3">
+<span class="material-symbols-outlined text-brand-leaf text-4xl" data-icon="eco" data-weight="fill" style="font-variation-settings: 'FILL' 1;">eco</span>
+<span class="font-label-md text-brand-coffee">Ingredientes frescos</span>
+</div>
+<div class="flex flex-col items-center text-center space-y-3">
+<span class="material-symbols-outlined text-brand-coral text-4xl" data-icon="favorite" data-weight="fill" style="font-variation-settings: 'FILL' 1;">favorite</span>
+<span class="font-label-md text-brand-coffee">Sabor casero</span>
+</div>
+<div class="flex flex-col items-center text-center space-y-3">
+<span class="material-symbols-outlined text-brand-coffee text-4xl" data-icon="two_wheeler" data-weight="fill" style="font-variation-settings: 'FILL' 1;">two_wheeler</span>
+<span class="font-label-md text-brand-coffee">Servicio a domicilio<br/><span class="text-sm font-normal opacity-80">$15 extra</span><br/><span class="text-[10px] font-normal opacity-60 italic">*El costo puede variar en caso de lluvia</span></span>
+</div>
+</div>
+</section>
+<!-- Nuestro Sabor -->
+<section class="py-xl px-margin-mobile md:px-margin-desktop max-w-[1280px] mx-auto fade-in-section is-visible" id="nosotros">
+<div class="text-center mb-16">
+<h2 class="font-headline-md md:font-display-lg text-brand-coral mb-4">Nuestro Sabor</h2>
+<p class="font-body-lg text-brand-coffee/80 max-w-2xl mx-auto">La auténtica experiencia taquera con tortillas hechas a mano y carnes seleccionadas.</p>
+</div>
+<div class="grid md:grid-cols-2 gap-12">
+<!-- Maiz -->
+<div class="bg-white rounded-[20px] p-6 shadow-ambient card-hover transition-all duration-300">
+<div class="h-64 rounded-xl overflow-hidden mb-6 image-zoom-container relative">
+<div class="absolute inset-0 bg-cover bg-center" style="background-image: url('img/maiz.jpg')"></div>
+</div>
+<h3 class="font-headline-sm text-brand-coffee mb-2 flex items-center gap-2">
+<span class="material-symbols-outlined text-brand-coral" data-icon="scatter_plot">scatter_plot</span>
+                        Tortillas de Maíz
+                    </h3>
+<p class="font-body-md text-brand-coffee/70 mb-4">Suaves, ricas y con ese sabor tradicional del barro. Perfectas para tu Pedido.</p>
+</div>
+<!-- Harina -->
+<div class="bg-white rounded-[20px] p-6 shadow-ambient card-hover transition-all duration-300">
+<div class="h-64 rounded-xl overflow-hidden mb-6 image-zoom-container relative">
+<div class="absolute inset-0 bg-cover bg-center" style="background-image: url('img/harina.jpg')"></div>
+</div>
+<h3 class="font-headline-sm text-brand-coffee mb-2 flex items-center gap-2">
+<span class="material-symbols-outlined text-brand-coral" data-icon="panorama_horizontal">panorama_horizontal</span>
+                        Tortillas de Harina
+                    </h3>
+<p class="font-body-md text-brand-coffee/70 mb-4">Recién hechecitas, grandes y con la receta secreta de mama!.</p>
+</div>
+</div>
+</section>
+<!-- Menú Taquitos -->
+<section class="py-xl px-margin-mobile md:px-margin-desktop max-w-[1280px] mx-auto fade-in-section is-visible" id="menu">
+<div class="text-center mb-16">
+<h2 class="font-headline-md md:font-display-lg text-brand-coral mb-4">Menú de la Casa</h2>
+<p class="font-body-lg text-brand-coffee/80 max-w-2xl mx-auto">Disfruta de nuestra variedad de taquitos preparados con el corazón y los mejores ingredientes.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Taquitos de Harina -->
+<div class="bg-white rounded-[20px] p-6 shadow-ambient card-hover transition-all duration-300 flex flex-col">
+<div class="h-48 rounded-xl overflow-hidden mb-6 image-zoom-container relative">
+<div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBe27PRReTo3Le08vDvKoBgEj9qI1IzFdl24-d7p1hjym_BTh9rDcmXwhPAjaMy_HwK0YDMAkpfwjlnaQsq3-tURUg1E1HoXqvIH0SxYPLhjEH1XRCM4YbJVbSO3cBNRraQzux3FQF04iK_d9kswBw_KoG8B6n_BV7zN1Mhx3UjXIFEnx6wjsyTITnn_RAO7RY5tJ_sCHkNwpoxdFQmO1ljWKZWrFmWb9B9XuEang9CqjVC9dvHuJg2Ptc8AG_IyXH9joQ')"></div>
+</div>
+<div class="flex-grow">
+<h3 class="font-headline-sm text-brand-coffee mb-2">Taquitos de Harina</h3>
+<p class="font-body-md text-brand-coffee/70 mb-4">Nuestra tortilla de harina especial, suave y calientita, rellena de tu guiso favorito.</p>
+<p class="font-headline-sm text-brand-coral mb-6">$15 c/u</p>
+</div>
+<button class="inline-flex items-center justify-center bg-brand-coral text-white font-label-md rounded-[12px] py-3 px-4 hover:brightness-110 transition-all gap-2 w-full" onclick="addToCart('Taquitos de Harina', 15)"><span class="material-symbols-outlined text-sm">add_shopping_cart</span>Agregar al Carrito</button>
+</div>
+<!-- Taquitos de Maíz -->
+<div class="bg-white rounded-[20px] p-6 shadow-ambient card-hover transition-all duration-300 flex flex-col">
+<div class="h-48 rounded-xl overflow-hidden mb-6 image-zoom-container relative">
+<div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDM8YXGFZslC07LkfjzyvhnkAUZyEUOQZ0ettmrGx2tYY1_rhDCmIxdMYB9DH-c7Gl-uxv_qknNURFHkrYy2ilHzltXKIlv4AzCHiBwd2X4NiCjb5V7U9gx8Ce4StbY4CNUsgJFNrrpaSuu6ahNeLsTji97QsYUGfQWpqUdyr4NjjD_zf1NBlG6pE2-ZFF12gbEas6YRX4-RGEuKZ69X5htWzNtMDsf5Cg2NJ5sBtP2okzoAa5epyF4cQN05BoIGdCdPyU')"></div>
+</div>
+<div class="flex-grow">
+<h3 class="font-headline-sm text-brand-coffee mb-2">Taquitos de Maíz</h3>
+<p class="font-body-md text-brand-coffee/70 mb-4">El sabor tradicional del maíz en una tortilla resistente y deliciosa hecha a mano.</p>
+<p class="font-headline-sm text-brand-coral mb-6">$15 c/u</p>
+</div>
+<button class="inline-flex items-center justify-center bg-brand-coral text-white font-label-md rounded-[12px] py-3 px-4 hover:brightness-110 transition-all gap-2 w-full" onclick="addToCart('Taquitos de Maíz', 15)"><span class="material-symbols-outlined text-sm">add_shopping_cart</span>Agregar al Carrito</button>
+</div>
+<!-- Taquitos de Maíz de Nixtamal -->
+<div class="bg-white rounded-[20px] p-6 shadow-ambient card-hover transition-all duration-300 flex flex-col">
+<div class="h-48 rounded-xl overflow-hidden mb-6 image-zoom-container relative">
+<div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCwcWiSuMf6R-Irxc5-smD0wKNfmz-Jmks8rXOzb2Hbd488OPlYYWezhkUM5d1DViBevK7cIyFLu5puKH04zbEs5A6E9LZJTGFJpSPoZPfuOYFqx5ZbRl7JKBJBqUaVvyYPaYmCDS2gN1Swo9FrP01iZbrjBEp0bRxHWCD2BEWBkp3_a7VIC6gkFnw0v1-w4A-FK94mBumeH20TfuKn95UfatGXiVFSljgqOjJDKgCvf39NvrTVk6YBPZO71dTdx_KmmHY')"></div>
+</div>
+<div class="flex-grow">
+<h3 class="font-headline-sm text-brand-coffee mb-2">Taquitos de Maíz de Nixtamal</h3>
+<p class="font-body-md text-brand-coffee/70 mb-4">Auténtico proceso de nixtamalización para un sabor y textura inigualables.</p>
+<p class="font-headline-sm text-brand-coral mb-6">$15 c/u</p>
+</div>
+<button class="inline-flex items-center justify-center bg-brand-coral text-white font-label-md rounded-[12px] py-3 px-4 hover:brightness-110 transition-all gap-2 w-full" onclick="addToCart('Taquitos de Maíz de Nixtamal', 15)"><span class="material-symbols-outlined text-sm">add_shopping_cart</span>Agregar al Carrito</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<section class="py-xl px-margin-mobile md:px-margin-desktop max-w-[1280px] mx-auto fade-in-section is-visible" id="ubicacion">
+<div class="text-center mb-16">
+<h2 class="font-headline-md md:font-display-lg text-brand-coral mb-4">Visítanos</h2>
+<p class="font-body-lg text-brand-coffee/80 max-w-2xl mx-auto">Te esperamos con el sabor auténtico de nuestros taquitos en el corazón de Minas de Barroterán.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center bg-white rounded-[20px] p-6 md:p-12 shadow-ambient">
+<div class="space-y-6">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-brand-coral text-3xl">location_on</span>
+<div>
+<h3 class="font-headline-sm text-brand-coffee mb-2">Nuestra Ubicación</h3>
+<p class="font-body-md text-brand-coffee/70">
+                        Calle Nicolás Bravo #88, Barrio 2,<br/>
+                        Minas de Barroterán, Coahuila.
+                    </p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-brand-coral text-3xl">schedule</span>
+<div>
+<h3 class="font-headline-sm text-brand-coffee mb-2">Horario</h3>
+<p class="font-body-md text-brand-coffee/70">Lunes a Domingo: 8:00 AM - 2:00 PM</p>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row gap-4 pt-4">
+<a class="inline-flex items-center justify-center bg-brand-coffee text-white font-label-md rounded-[12px] px-8 py-4 hover:brightness-110 transition-all gap-2" href="https://www.google.com/maps/dir/?api=1&amp;destination=Calle+Nicolás+Bravo+88,+Barrio+2,+Minas+de+Barroterán,+Coahuila" target="_blank">
+<span class="material-symbols-outlined">directions</span>
+                    Cómo llegar
+                </a>
+</div>
+</div>
+<div class="h-[300px] md:h-[400px] rounded-xl overflow-hidden shadow-sm">
+<iframe allowfullscreen="" height="100%" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3544.345678901234!2d-101.2789012!3d27.6456789!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjfCsDM4JzQ0LjQiTiAxMDHCsDE2JzQ0LjAiVw!5e0!3m2!1ses!2smx!4v1715000000000!5m2!1ses!2smx" style="border:0;" width="100%">
+</iframe>
+</div>
+</div>
+</section><footer class="bg-surface-container-highest dark:bg-inverse-surface w-full py-lg mt-20 relative z-10 pb-24 md:pb-lg">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-mobile md:px-margin-desktop gap-md max-w-[1280px] mx-auto transition-all duration-300">
+<div class="flex flex-col items-center md:items-start text-center md:text-left">
+<img alt="Taquitos Mayra Logo" class="h-12 w-auto object-contain mb-2" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHiA4jfyZgV-urqlkD1kkx9RAXXvuJPEWYx8fqZtjuVnyLcBDLb9slFDUe8cK0jnXNm78y0RLTFO7Qo57x60rT_No_s58q8XZOJ0qaFdRDnLe7vlRRdERquXDGng2nhC9EobjGaBxKUFD6r-VEbpRVVF_Jlt26YCqj3NZCxzAheezbxaY9MZkkZVeItJITz1FQJfvXIc0A1OjwYbDoTA78ZQn9wI3pG-LjrB42nEiubm74pS_f1vclkDU7UdU3LMY8lo8"/>
+<p class="font-body-md text-body-md text-secondary dark:text-secondary-fixed-dim">© 2024 Taquitos Mayra. Calle Nicolás Bravo #88, Barrio 2, Minas de Barroterán, Coahuila.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6">
+<a class="font-body-md text-body-md text-secondary dark:text-secondary-fixed-dim hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="font-body-md text-body-md text-secondary dark:text-secondary-fixed-dim hover:text-primary transition-colors" href="#">Terms of Service</a>
+</div>
+</div>
+</footer>
+<script>
+        // Shopping Cart Logic
+        let cart = [];
+        let deliveryMethod = 'pickup';
+        
+        const cartOverlay = document.getElementById('cart-overlay');
+        const cartDrawer = document.getElementById('cart-drawer');
+        const cartItemsContainer = document.getElementById('cart-items-container');
+        const emptyCartMessage = document.getElementById('empty-cart-message');
+        const cartTotalEl = document.getElementById('cart-total');
+        const cartCountBadge = document.getElementById('cart-count-badge');
+        const checkoutBtn = document.getElementById('checkout-btn');
+
+        function toggleCart() {
+            const isHidden = cartOverlay.classList.contains('hidden');
+            if (isHidden) {
+                cartOverlay.classList.remove('hidden');
+                setTimeout(() => {
+                    cartDrawer.classList.remove('translate-x-full');
+                }, 10);
+            } else {
+                cartDrawer.classList.add('translate-x-full');
+                setTimeout(() => {
+                    cartOverlay.classList.add('hidden');
+                }, 300);
+            }
+            renderCart();
+        }
+
+        function setDeliveryMethod(method) {
+            deliveryMethod = method;
+            const btnPickup = document.getElementById('btn-pickup');
+            const btnDelivery = document.getElementById('btn-delivery');
+            const pickupFields = document.getElementById('pickup-fields');
+            const deliveryFields = document.getElementById('delivery-fields');
+            const deliveryCostRow = document.getElementById('delivery-cost-row');
+
+            if (method === 'pickup') {
+                btnPickup.classList.add('bg-white', 'shadow-sm', 'text-brand-coral');
+                btnPickup.classList.remove('text-brand-coffee/60');
+                
+                btnDelivery.classList.remove('bg-white', 'shadow-sm', 'text-brand-coral');
+                btnDelivery.classList.add('text-brand-coffee/60');
+                
+                pickupFields.classList.remove('hidden');
+                deliveryFields.classList.add('hidden');
+                deliveryCostRow.classList.add('hidden');
+            } else {
+                btnDelivery.classList.add('bg-white', 'shadow-sm', 'text-brand-coral');
+                btnDelivery.classList.remove('text-brand-coffee/60');
+                
+                btnPickup.classList.remove('bg-white', 'shadow-sm', 'text-brand-coral');
+                btnPickup.classList.add('text-brand-coffee/60');
+                
+                deliveryFields.classList.remove('hidden');
+                pickupFields.classList.add('hidden');
+                deliveryCostRow.classList.remove('hidden');
+            }
+            renderCart();
+        }
+
+        function addToCart(name, price) {
+            const existingItem = cart.find(item => item.name === name);
+            if (existingItem) {
+                existingItem.quantity += 1;
+            } else {
+                cart.push({ name, price, quantity: 1 });
+            }
+            updateCartBadge();
+            
+            // Open cart drawer feedback
+            cartOverlay.classList.remove('hidden');
+            setTimeout(() => {
+                cartDrawer.classList.remove('translate-x-full');
+            }, 10);
+            renderCart();
+        }
+
+        function updateQuantity(name, change) {
+            const item = cart.find(item => item.name === name);
+            if (item) {
+                item.quantity += change;
+                if (item.quantity <= 0) {
+                    cart = cart.filter(i => i.name !== name);
+                }
+            }
+            updateCartBadge();
+            renderCart();
+        }
+
+        function updateCartBadge() {
+            const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+            if (totalItems > 0) {
+                cartCountBadge.textContent = totalItems;
+                cartCountBadge.classList.remove('hidden');
+            } else {
+                cartCountBadge.classList.add('hidden');
+            }
+        }
+
+        function renderCart() {
+            // Clear current items (except empty message)
+            const itemEls = cartItemsContainer.querySelectorAll('.cart-item');
+            itemEls.forEach(el => el.remove());
+
+            if (cart.length === 0) {
+                emptyCartMessage.classList.remove('hidden');
+                checkoutBtn.disabled = true;
+                cartTotalEl.textContent = '$0';
+                return;
+            }
+
+            emptyCartMessage.classList.add('hidden');
+            checkoutBtn.disabled = false;
+
+            let total = 0;
+
+            cart.forEach(item => {
+                total += item.price * item.quantity;
+                
+                const itemEl = document.createElement('div');
+                itemEl.className = 'cart-item bg-white p-4 rounded-[16px] shadow-sm flex items-center justify-between border border-brand-coffee/5';
+                itemEl.innerHTML = `
+                    <div class="flex-1">
+                        <h4 class="font-headline-sm text-brand-coffee text-sm">${item.name}</h4>
+                        <p class="font-label-md text-brand-coral">$${item.price} c/u</p>
+                    </div>
+                    <div class="flex items-center gap-3 bg-surface-container-low rounded-full px-2 py-1">
+                        <button onclick="updateQuantity('${item.name}', -1)" class="w-6 h-6 flex items-center justify-center rounded-full hover:bg-brand-coral/10 text-brand-coffee transition-colors">
+                            <span class="material-symbols-outlined text-[16px]">remove</span>
+                        </button>
+                        <span class="font-label-md w-4 text-center">${item.quantity}</span>
+                        <button onclick="updateQuantity('${item.name}', 1)" class="w-6 h-6 flex items-center justify-center rounded-full hover:bg-brand-coral/10 text-brand-coffee transition-colors">
+                            <span class="material-symbols-outlined text-[16px]">add</span>
+                        </button>
+                    </div>
+                `;
+                cartItemsContainer.appendChild(itemEl);
+            });
+
+            if (deliveryMethod === 'delivery') {
+                total += 15;
+            }
+
+            cartTotalEl.textContent = `$${total}`;
+        }
+
+        function checkoutWhatsApp() {
+            if (cart.length === 0) return;
+
+            let message = "Hola! Quiero hacer un pedido:\n\n";
+            let total = 0;
+
+            cart.forEach(item => {
+                const subtotal = item.price * item.quantity;
+                total += subtotal;
+                message += `${item.quantity}x ${item.name} - $${subtotal}\n`;
+            });
+
+            if (deliveryMethod === 'delivery') {
+                total += 15;
+                message += `\nCosto de envío: $15\n`;
+            }
+
+            message += `\n*Total a pagar: $${total}*\n\n`;
+
+            if (deliveryMethod === 'pickup') {
+                const name = document.getElementById('pickup-name').value || 'No especificado';
+                const phone = document.getElementById('pickup-phone').value || 'No especificado';
+                message += `*Método:* Pasar por él\n*Nombre:* ${name}\n*Teléfono:* ${phone}`;
+            } else {
+                const name = document.getElementById('del-name').value || 'No especificado';
+                const phone = document.getElementById('del-phone').value || 'No especificado';
+                const street = document.getElementById('del-street').value || 'No especificada';
+                const number = document.getElementById('del-number').value || 'S/N';
+                const between = document.getElementById('del-between').value || 'No especificado';
+                const ref = document.getElementById('del-ref').value || 'Ninguna';
+                
+                message += `*Método:* A domicilio\n*Nombre:* ${name}\n*Teléfono:* ${phone}\n*Dirección:* ${street} #${number}\n*Entre calles:* ${between}\n*Referencia:* ${ref}`;
+            }
+            
+            const encodedMessage = encodeURIComponent(message);
+            const whatsappUrl = `https://wa.me/8641323345?text=${encodedMessage}`;
+            window.open(whatsappUrl, '_blank');
+        }
+
+        // Intersection Observer for fade-in animations
+        document.addEventListener("DOMContentLoaded", () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.fade-in-section').forEach((el) => {
+                observer.observe(el);
+            });
+        });
+    </script>
+</body></html>
