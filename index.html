@@ -1,11 +1,13 @@
-<!DOCTYPE html><html class="scroll-smooth" lang="es" style=""><head>
-<meta charset="utf-8">
-<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="es" style=""><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Taquitos Mayra | Taquitos calientitos, ricos y hechos al momento</title>
-<meta content="Disfruta Taquitos Mayra, preparados al momento con sabor casero. Pedidos al 864 132 3345." name="description">
+<meta content="Disfruta Taquitos Mayra, preparados al momento con sabor casero. Pedidos al 864 132 3345." name="description"/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@600;700&amp;family=Montserrat:wght@400;600&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@600;700&amp;family=Montserrat:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
@@ -124,25 +126,13 @@
         .card-hover:hover .image-zoom-container img { transform: scale(1.05); }
         .fade-in-section { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; }
         .fade-in-section.is-visible { opacity: 1; transform: none; }
-        
-        /* Cart Drawer Transitions */
-        #cart-overlay.hidden { display: none; }
-        #cart-drawer.translate-x-full { transform: translateX(100%); }
     </style>
 </head>
-<body class="font-body-md text-body-md bg-brand-cream bg-paper-texture antialiased selection:bg-brand-coral selection:text-white"><div class="fixed inset-0 z-[100] hidden flex items-center justify-center bg-black/90 backdrop-blur-sm transition-opacity duration-300 opacity-0" id="lightbox-modal">
-<button class="absolute top-6 right-6 text-white hover:text-brand-coral transition-colors" onclick="closeLightbox()">
-<span class="material-symbols-outlined text-4xl">close</span>
-</button>
-<div class="max-w-[90vw] max-h-[90vh] relative">
-<img alt="Enlarged view" class="max-w-full max-h-[85vh] object-contain rounded-lg shadow-2xl" id="lightbox-img" src="">
-<p class="text-white text-center mt-4 font-body-md" id="lightbox-caption"></p>
-</div>
-</div>
+<body class="font-body-md text-body-md bg-brand-cream bg-paper-texture antialiased selection:bg-brand-coral selection:text-white">
 <!-- TopNavBar -->
 <nav class="fixed top-0 w-full z-50 bg-brand-cream/90 backdrop-blur-md shadow-sm border-b border-brand-coffee/5 py-4 transition-all duration-300" id="navbar">
 <div class="flex flex-col md:flex-row justify-between items-center px-margin-mobile md:px-margin-desktop py-base max-w-[1280px] mx-auto w-full">
-<a class="font-display-lg text-headline-sm text-brand-coral tracking-tight mb-4 md:mb-0" href="#"><img alt="Taquitos Mayra Logo" class="h-12 md:h-16 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOe6g32NnyrsRFpsOizWb6fGSWxe2uxgSHIRmOgY-1MXLuft4--XQY-gx6Ijo3QJC0qrt0XvNolocB9Cvl2CKKte33lRrWix5N4K3IyhKOMXmHESvSn08Dt21LTSTfRmeB61Y1ivhXiJlVPdlKcEzycaQZhPLC0EqU_Vkr7OvAhIKRvqCdjxGEQaMa2_Rv6fMWxRcUMiHmWnIREX-EhqX8InyqHJpUaahtf8q1HvDb9tTlCNf2-EvqeURq_RZkRQFBf4I"></a>
+<a class="font-display-lg text-headline-sm text-brand-coral tracking-tight mb-4 md:mb-0" href="#"><img alt="Taquitos Mayra Logo" class="h-12 md:h-16 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOe6g32NnyrsRFpsOizWb6fGSWxe2uxgSHIRmOgY-1MXLuft4--XQY-gx6Ijo3QJC0qrt0XvNolocB9Cvl2CKKte33lRrWix5N4K3IyhKOMXmHESvSn08Dt21LTSTfRmeB61Y1ivhXiJlVPdlKcEzycaQZhPLC0EqU_Vkr7OvAhIKRvqCdjxGEQaMa2_Rv6fMWxRcUMiHmWnIREX-EhqX8InyqHJpUaahtf8q1HvDb9tTlCNf2-EvqeURq_RZkRQFBf4I"/></a>
 <div class="hidden md:flex gap-6 items-center flex-wrap justify-center flex-1 ml-8">
 <a class="text-brand-coffee hover:text-brand-coral transition-colors font-label-md" href="#menu">Menú</a>
 <a class="text-brand-coffee hover:text-brand-coral transition-colors font-label-md" href="#nosotros">Nuestro Sabor</a>
@@ -157,9 +147,9 @@
 </div>
 </nav>
 <!-- Cart Overlay and Drawer -->
-<div class="fixed inset-0 bg-black/50 z-[60] hidden transition-opacity" id="cart-overlay" onclick="toggleCart()"></div>
-<div class="fixed top-0 right-0 w-full h-full bg-surface-container-lowest z-[70] shadow-2xl transform translate-x-full transition-transform duration-300 flex flex-col md:w-[400px]" id="cart-drawer">
-<div class="flex items-center justify-between p-6 border-b border-brand-coffee/10">
+<div class="fixed inset-0 bg-black/50 backdrop-blur-sm z-[90] hidden opacity-0 pointer-events-none transition-opacity" id="cart-overlay" onclick="toggleCart()"></div>
+<div class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[90vw] max-w-[600px] h-auto max-h-[90vh] bg-surface-container-lowest z-[100] shadow-2xl transform transition-all duration-300 flex-col rounded-3xl overflow-hidden hidden opacity-0 pointer-events-none" id="cart-drawer">
+<div class="flex items-center justify-between p-6 border-b border-brand-coffee/10 shrink-0">
 <h2 class="font-headline-sm text-brand-coffee flex items-center gap-2">
 <span class="material-symbols-outlined text-brand-coral">shopping_cart</span>
             Tu Pedido
@@ -168,7 +158,8 @@
 <span class="material-symbols-outlined">close</span>
 </button>
 <button class="text-brand-leaf hover:text-brand-coral transition-colors font-label-md flex items-center gap-1 ml-auto mr-4" onclick="toggleCart()"><span class="material-symbols-outlined text-sm">arrow_back</span> Seguir comprando</button></div>
-<div class="flex-1 overflow-y-auto p-6 space-y-6" id="cart-items-container">
+<div class="flex-1 overflow-y-auto">
+<div class="p-6 space-y-6 flex flex-col" id="cart-items-container">
 <!-- Cart Items will be injected here -->
 <div class="text-center text-brand-coffee/60 py-12 flex flex-col items-center gap-4" id="empty-cart-message">
 <span class="material-symbols-outlined text-5xl opacity-20">remove_shopping_cart</span>
@@ -177,30 +168,30 @@
 </div><div class="px-6 pb-6 space-y-6 border-t border-brand-coffee/5 pt-6">
 <div class="space-y-4">
 <h3 class="font-label-md text-brand-coffee uppercase tracking-wider text-xs">Método de Entrega</h3>
-<div class="grid grid-cols-2 gap-2 p-1 bg-surface-container-low rounded-xl">
+<div class="grid grid-cols-2 gap-2 p-1 bg-surface-container-low rounded-xl sm:gap-4">
 <button class="py-2 px-4 rounded-lg font-label-md transition-all bg-white shadow-sm text-brand-coral" id="btn-pickup" onclick="setDeliveryMethod('pickup')">Recoger en Sucursal</button>
 <button class="py-2 px-4 rounded-lg font-label-md transition-all text-brand-coffee/60" id="btn-delivery" onclick="setDeliveryMethod('delivery')">A Domicilio</button>
 </div>
 </div>
 <div class="space-y-4" id="delivery-form">
 <div class="space-y-3" id="pickup-fields">
-<input class="w-full px-4 py-3 rounded-xl border-brand-coffee/10 focus:border-brand-coral focus:ring-brand-coral font-body-md text-sm" id="pickup-name" placeholder="Nombre" type="text" required="required">
-<input class="w-full px-4 py-3 rounded-xl border-brand-coffee/10 focus:border-brand-coral focus:ring-brand-coral font-body-md text-sm" id="pickup-phone" placeholder="Teléfono" type="tel" required="required">
+<input class="w-full px-4 py-3 rounded-xl border-brand-coffee/10 focus:border-brand-coral focus:ring-brand-coral font-body-md text-sm" id="pickup-name" placeholder="Nombre" required="required" type="text"/>
+<input class="w-full px-4 py-3 rounded-xl border-brand-coffee/10 focus:border-brand-coral focus:ring-brand-coral font-body-md text-sm" id="pickup-phone" maxlength="10" minlength="10" pattern="[0-9]{10}" placeholder="Teléfono" required="required" title="El número de teléfono debe tener 10 dígitos" type="tel"/>
 </div>
 <div class="space-y-3 hidden" id="delivery-fields">
-<input class="w-full px-4 py-3 rounded-xl border-brand-coffee/10 focus:border-brand-coral focus:ring-brand-coral font-body-md text-sm" id="del-name" placeholder="Nombre de quién recibe" type="text" required="required">
-<input class="w-full px-4 py-3 rounded-xl border-brand-coffee/10 focus:border-brand-coral focus:ring-brand-coral font-body-md text-sm" id="del-phone" placeholder="Teléfono" type="tel" required="required">
-<div class="grid grid-cols-2 gap-3">
-<input class="w-full px-4 py-3 rounded-xl border-brand-coffee/10 focus:border-brand-coral focus:ring-brand-coral font-body-md text-sm" id="del-street" placeholder="Calle" type="text" required="required">
-<input class="w-full px-4 py-3 rounded-xl border-brand-coffee/10 focus:border-brand-coral focus:ring-brand-coral font-body-md text-sm" id="del-number" placeholder="Número" type="text" required="required">
+<input class="w-full px-4 py-3 rounded-xl border-brand-coffee/10 focus:border-brand-coral focus:ring-brand-coral font-body-md text-sm" id="del-name" placeholder="Nombre de quién recibe" required="required" type="text"/>
+<input class="w-full px-4 py-3 rounded-xl border-brand-coffee/10 focus:border-brand-coral focus:ring-brand-coral font-body-md text-sm" id="del-phone" maxlength="10" minlength="10" pattern="[0-9]{10}" placeholder="Teléfono" required="required" title="El número de teléfono debe tener 10 dígitos" type="tel"/>
+<div class="grid grid-cols-2 gap-3 sm:gap-4">
+<input class="w-full px-4 py-3 rounded-xl border-brand-coffee/10 focus:border-brand-coral focus:ring-brand-coral font-body-md text-sm" id="del-street" placeholder="Calle" required="required" type="text"/>
+<input class="w-full px-4 py-3 rounded-xl border-brand-coffee/10 focus:border-brand-coral focus:ring-brand-coral font-body-md text-sm" id="del-number" placeholder="Número" required="required" type="text"/>
 </div>
-<input class="w-full px-4 py-3 rounded-xl border-brand-coffee/10 focus:border-brand-coral focus:ring-brand-coral font-body-md text-sm" id="del-between" placeholder="Entre calles" type="text" required="required">
-<input class="w-full px-4 py-3 rounded-xl border-brand-coffee/10 focus:border-brand-coral focus:ring-brand-coral font-body-md text-sm" id="del-ref" placeholder="Referencia (opcional)" type="text">
+<input class="w-full px-4 py-3 rounded-xl border-brand-coffee/10 focus:border-brand-coral focus:ring-brand-coral font-body-md text-sm" id="del-between" placeholder="Entre calles" required="required" type="text"/>
+<input class="w-full px-4 py-3 rounded-xl border-brand-coffee/10 focus:border-brand-coral focus:ring-brand-coral font-body-md text-sm" id="del-ref" placeholder="Referencia (opcional)" type="text"/>
 </div>
 </div>
 <div class="space-y-4 pt-4 border-t border-brand-coffee/5">
 <h3 class="font-label-md text-brand-coffee uppercase tracking-wider text-xs">Método de Pago</h3>
-<div class="grid grid-cols-2 gap-2 p-1 bg-surface-container-low rounded-xl">
+<div class="grid grid-cols-2 gap-2 p-1 bg-surface-container-low rounded-xl sm:gap-4">
 <button class="py-2 px-4 rounded-lg font-label-md transition-all bg-white shadow-sm text-brand-coral" id="btn-cash" onclick="setPaymentMethod('cash')">Efectivo</button>
 <button class="py-2 px-4 rounded-lg font-label-md transition-all text-brand-coffee/60" id="btn-transfer" onclick="setPaymentMethod('transfer')">Transferencia</button>
 </div>
@@ -209,7 +200,7 @@
 <label class="block font-label-md text-sm text-brand-coffee/80" for="cash-amount">¿Con cuánto pagará?</label>
 <div class="relative">
 <span class="absolute left-4 top-1/2 -translate-y-1/2 font-body-md text-brand-coffee/60">$</span>
-<input class="w-full pl-8 pr-4 py-3 rounded-xl border-brand-coffee/10 focus:border-brand-coral focus:ring-brand-coral font-body-md text-sm" id="cash-amount" min="0" placeholder="Ej. 200" step="1" type="number">
+<input class="w-full pl-8 pr-4 py-3 rounded-xl border-brand-coffee/10 focus:border-brand-coral focus:ring-brand-coral font-body-md text-sm" id="cash-amount" min="0" placeholder="Ej. 200" step="1" type="number"/>
 </div>
 <p class="text-xs text-brand-coral hidden font-body-md" id="cash-error">El monto debe ser mayor o igual al total.</p>
 </div>
@@ -220,7 +211,8 @@
 </div>
 </div>
 </div>
-<div class="p-6 bg-surface-container-low border-t border-brand-coffee/10"><div class="text-center mb-4"><button class="text-brand-coffee/60 hover:text-brand-coral font-label-md transition-colors underline decoration-brand-coral/30 underline-offset-4" onclick="toggleCart()">¿Deseas agregar algo más? Seguir comprando</button></div>
+</div>
+<div class="p-6 bg-surface-container-low border-t border-brand-coffee/10 shrink-0"><div class="text-center mb-4"><button class="text-brand-coffee/60 hover:text-brand-coral font-label-md transition-colors underline decoration-brand-coral/30 underline-offset-4" onclick="toggleCart()">¿Deseas agregar algo más? Seguir comprando</button></div>
 <div class="flex justify-between items-center mb-2 hidden" id="delivery-cost-row">
 <span class="font-body-md text-brand-coffee/70">Costo de envío:</span>
 <span class="font-label-md text-brand-coffee">$15</span>
@@ -228,7 +220,7 @@
 <span class="font-headline-sm text-brand-coffee">Total:</span>
 <span class="font-display-lg-mobile text-brand-coral" id="cart-total">$0</span>
 </div>
-<button class="w-full flex items-center justify-center bg-brand-coral text-white font-label-md rounded-[12px] py-4 px-6 hover:brightness-110 transition-all gap-2 disabled:opacity-50 disabled:cursor-not-allowed" disabled="" id="checkout-btn" onclick="if(this.closest('#cart-drawer').querySelectorAll('input[required]:not(.hidden *)').length &gt; 0 &amp;&amp; Array.from(this.closest('#cart-drawer').querySelectorAll('input[required]:not(.hidden *)')).some(i =&gt; !i.value.trim())) { alert('Por favor, completa todos los campos obligatorios.'); return; } checkoutWhatsApp()">
+<button class="w-full flex items-center justify-center bg-brand-coral text-white font-label-md rounded-[12px] py-4 px-6 hover:brightness-110 transition-all gap-2 disabled:opacity-50 disabled:cursor-not-allowed md:py-5 block" disabled="" id="checkout-btn" onclick="const inputs = Array.from(this.closest('#cart-drawer').querySelectorAll('input[required]')).filter(i =&gt; i.closest('.hidden') === null); const invalid = inputs.find(i =&gt; !i.checkValidity()); if(invalid) { invalid.reportValidity(); return; } checkoutWhatsApp()">
 <span class="material-symbols-outlined">send</span>
             Enviar Pedido por WhatsApp
         </button>
@@ -264,7 +256,7 @@
                         Authentic homemade flavor brought to your table. Experience the tradition in every bite.
                     </p>
 <div class="flex flex-col sm:flex-row gap-4 mt-4 w-full sm:w-auto relative">
-<button class="inline-flex items-center justify-center bg-brand-coral text-white font-label-md rounded-[12px] px-8 py-4 hover:shadow-ambient-lg transition-all hover:-translate-y-1 w-full sm:w-auto animate-pulse shadow-[0_0_15px_rgba(226,76,56,0.5)] hover:brightness-110 hover:scale-105" onclick="toggleCart()">
+<button class="inline-flex items-center justify-center bg-brand-coral text-white font-label-md rounded-[12px] px-8 py-4 hover:shadow-ambient-lg transition-all hover:-translate-y-1 w-full sm:w-auto animate-pulse shadow-[0_0_15px_rgba(226,76,56,0.5)] hover:brightness-110 hover:scale-105" onclick="openCart()">
 <span class="material-symbols-outlined mr-2">shopping_bag</span> Ver mi pedido
 </button>
 <a class="inline-flex items-center justify-center bg-transparent border-2 border-brand-coffee text-brand-coffee font-label-md rounded-[12px] px-8 py-4 hover:bg-brand-coffee/5 transition-all w-full sm:w-auto" href="#menu">
@@ -296,7 +288,7 @@
 </div>
 <div class="flex flex-col items-center text-center space-y-3">
 <span class="material-symbols-outlined text-brand-coffee text-4xl" data-icon="two_wheeler" data-weight="fill" style="font-variation-settings: 'FILL' 1;">two_wheeler</span>
-<span class="font-label-md text-brand-coffee">Servicio a domicilio<br><span class="text-sm font-normal opacity-80">$15 extra</span><br><span class="text-[10px] font-normal opacity-60 italic">*El costo puede variar en caso de lluvia</span></span>
+<span class="font-label-md text-brand-coffee">Servicio a domicilio<br/><span class="text-sm font-normal opacity-80">$15 extra</span><br/><span class="text-[10px] font-normal opacity-60 italic">*El costo puede variar en caso de lluvia</span></span>
 </div>
 </div>
 </section>
@@ -339,14 +331,14 @@
 </div>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
 <!-- Taquitos de Harina -->
-<div class="bg-white rounded-[20px] p-6 shadow-ambient card-hover transition-all duration-300 flex flex-col"><div class="h-48 rounded-xl overflow-hidden mb-6 image-zoom-container relative"><div class="absolute inset-0 bg-cover bg-center cursor-pointer cursor-zoom-in" style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuCdRwWOhXc8crg43HYS8K6ouG6hRfrBHCC3QbKKmtuK1glgzRAPMDHBLa4_RTFZz4TfTE5PXIAhrcuJDg5puG8zFvqma-e-mj7WKdAn3qKoXRHXM8flwSmdagsMu0rvoaFz3xIjRYyWyO_qVmY4Jn23CQ_lOGRoNJB47iu6FOh6rmqKjcg3_zkwsHi4IUgMRmCOVETyWlz6kxMxAkeD0ewrywC7Yxw_T32r7yCOCslquKNwDugBC-Zlylf4Dt38wLpz-G0&quot;);"></div></div><div class="flex-grow"><h3 class="font-headline-sm text-brand-coffee mb-2">Taquitos de Harina</h3><p class="font-body-md text-brand-coffee/70 mb-4">Nuestra tortilla de harina especial, suave y calientita, rellena de tu guiso favorito.</p><div class="flex flex-col gap-3 mb-6"><div class="flex items-center justify-between border-b border-brand-coffee/10 pb-2"><span class="font-body-md text-brand-coffee">Media Docena</span><span class="font-headline-sm text-brand-coral">$60</span></div><div class="flex items-center justify-between pb-2"><span class="font-body-md text-brand-coffee">Docena</span><span class="font-headline-sm text-brand-coral">$120</span></div></div></div><div class="flex flex-col gap-2 mt-auto"><button class="inline-flex items-center justify-center bg-brand-coral text-white font-label-md rounded-[12px] py-3 px-4 hover:brightness-110 transition-all gap-2 w-full" onclick="addToCart('Taquitos de Harina (Media Docena)', 60)"><span class="material-symbols-outlined text-sm">add_shopping_cart</span>Agregar Media (6)</button><button class="inline-flex items-center justify-center bg-brand-coral text-white font-label-md rounded-[12px] py-3 px-4 hover:brightness-110 transition-all gap-2 w-full" onclick="addToCart('Taquitos de Harina (Docena)', 120)"><span class="material-symbols-outlined text-sm">add_shopping_cart</span>Agregar Docena (12)</button></div></div>
+<div class="bg-white rounded-[20px] p-6 shadow-ambient card-hover transition-all duration-300 flex flex-col"><div class="h-48 rounded-xl overflow-hidden mb-6 image-zoom-container relative"><div class="absolute inset-0 bg-cover bg-center cursor-pointer cursor-zoom-in" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCdRwWOhXc8crg43HYS8K6ouG6hRfrBHCC3QbKKmtuK1glgzRAPMDHBLa4_RTFZz4TfTE5PXIAhrcuJDg5puG8zFvqma-e-mj7WKdAn3qKoXRHXM8flwSmdagsMu0rvoaFz3xIjRYyWyO_qVmY4Jn23CQ_lOGRoNJB47iu6FOh6rmqKjcg3_zkwsHi4IUgMRmCOVETyWlz6kxMxAkeD0ewrywC7Yxw_T32r7yCOCslquKNwDugBC-Zlylf4Dt38wLpz-G0");'></div></div><div class="flex-grow"><h3 class="font-headline-sm text-brand-coffee mb-2">Taquitos de Harina</h3><p class="font-body-md text-brand-coffee/70 mb-4">Nuestra tortilla de harina especial, suave y calientita, rellena de tu guiso favorito.</p><div class="flex flex-col gap-3 mb-6"><div class="flex items-center justify-between border-b border-brand-coffee/10 pb-2"><span class="font-body-md text-brand-coffee">Media Docena</span><span class="font-headline-sm text-brand-coral">$60</span></div><div class="flex items-center justify-between pb-2"><span class="font-body-md text-brand-coffee">Docena</span><span class="font-headline-sm text-brand-coral">$120</span></div></div></div><div class="flex flex-col gap-2 mt-auto"><button class="inline-flex items-center justify-center bg-brand-coral text-white font-label-md rounded-[12px] py-3 px-4 hover:brightness-110 transition-all gap-2 w-full" onclick="addToCart('Taquitos de Harina (Media Docena)', 60)"><span class="material-symbols-outlined text-sm">add_shopping_cart</span>Agregar Media (6)</button><button class="inline-flex items-center justify-center bg-brand-coral text-white font-label-md rounded-[12px] py-3 px-4 hover:brightness-110 transition-all gap-2 w-full" onclick="addToCart('Taquitos de Harina (Docena)', 120)"><span class="material-symbols-outlined text-sm">add_shopping_cart</span>Agregar Docena (12)</button></div></div>
 <!-- Taquitos de Maíz -->
-<div class="bg-white rounded-[20px] p-6 shadow-ambient card-hover transition-all duration-300 flex flex-col"><div class="h-48 rounded-xl overflow-hidden mb-6 image-zoom-container relative"><div class="absolute inset-0 bg-cover bg-center cursor-pointer cursor-zoom-in" style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuBCaGyHNkLAmI8jneNOc7KdVTbeSD3FBTlrCsw5G5TF1RmC-JANQF56GFwxPjIb4tXVkqXYYzMSCV0Gs7ylZ1P-9XVtFYVJaRm5jpnnTQfk1z5UlYpKtcq-cOa7JhGgmzit_sIgL3WdYw5qtJ9BCFOZf5f49xw_6yUMZgfyjL9_iI9ilFXXy_tUM1IBd5sehVlyFm4j81_va_me4Ndd10XnUGyYoYVne0C0QrPv6de8VoGm4sYdrXomp4OEgRbcbgFYSOA&quot;);"></div></div><div class="flex-grow"><h3 class="font-headline-sm text-brand-coffee mb-2">Taquitos de Maíz</h3><p class="font-body-md text-brand-coffee/70 mb-4">El sabor tradicional del maíz en una tortilla resistente y deliciosa hecha a mano.</p><div class="flex flex-col gap-3 mb-6"><div class="flex items-center justify-between border-b border-brand-coffee/10 pb-2"><span class="font-body-md text-brand-coffee">Media Docena</span><span class="font-headline-sm text-brand-coral">$50</span></div><div class="flex items-center justify-between pb-2"><span class="font-body-md text-brand-coffee">Docena</span><span class="font-headline-sm text-brand-coral">$100</span></div></div></div><div class="flex flex-col gap-2 mt-auto"><button class="inline-flex items-center justify-center bg-brand-coral text-white font-label-md rounded-[12px] py-3 px-4 hover:brightness-110 transition-all gap-2 w-full" onclick="addToCart('Taquitos de Maíz (Media Docena)', 60)"><span class="material-symbols-outlined text-sm">add_shopping_cart</span>Agregar Media (6)</button><button class="inline-flex items-center justify-center bg-brand-coral text-white font-label-md rounded-[12px] py-3 px-4 hover:brightness-110 transition-all gap-2 w-full" onclick="addToCart('Taquitos de Maíz (Docena)', 120)"><span class="material-symbols-outlined text-sm">add_shopping_cart</span>Agregar Docena (12)</button></div></div>
+<div class="bg-white rounded-[20px] p-6 shadow-ambient card-hover transition-all duration-300 flex flex-col"><div class="h-48 rounded-xl overflow-hidden mb-6 image-zoom-container relative"><div class="absolute inset-0 bg-cover bg-center cursor-pointer cursor-zoom-in" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBCaGyHNkLAmI8jneNOc7KdVTbeSD3FBTlrCsw5G5TF1RmC-JANQF56GFwxPjIb4tXVkqXYYzMSCV0Gs7ylZ1P-9XVtFYVJaRm5jpnnTQfk1z5UlYpKtcq-cOa7JhGgmzit_sIgL3WdYw5qtJ9BCFOZf5f49xw_6yUMZgfyjL9_iI9ilFXXy_tUM1IBd5sehVlyFm4j81_va_me4Ndd10XnUGyYoYVne0C0QrPv6de8VoGm4sYdrXomp4OEgRbcbgFYSOA");'></div></div><div class="flex-grow"><h3 class="font-headline-sm text-brand-coffee mb-2">Taquitos de Maíz</h3><p class="font-body-md text-brand-coffee/70 mb-4">El sabor tradicional del maíz en una tortilla resistente y deliciosa hecha a mano.</p><div class="flex flex-col gap-3 mb-6"><div class="flex items-center justify-between border-b border-brand-coffee/10 pb-2"><span class="font-body-md text-brand-coffee">Media Docena</span><span class="font-headline-sm text-brand-coral">$60</span></div><div class="flex items-center justify-between pb-2"><span class="font-body-md text-brand-coffee">Docena</span><span class="font-headline-sm text-brand-coral">$120</span></div></div></div><div class="flex flex-col gap-2 mt-auto"><button class="inline-flex items-center justify-center bg-brand-coral text-white font-label-md rounded-[12px] py-3 px-4 hover:brightness-110 transition-all gap-2 w-full" onclick="addToCart('Taquitos de Maíz (Media Docena)', 60)"><span class="material-symbols-outlined text-sm">add_shopping_cart</span>Agregar Media (6)</button><button class="inline-flex items-center justify-center bg-brand-coral text-white font-label-md rounded-[12px] py-3 px-4 hover:brightness-110 transition-all gap-2 w-full" onclick="addToCart('Taquitos de Maíz (Docena)', 120)"><span class="material-symbols-outlined text-sm">add_shopping_cart</span>Agregar Docena (12)</button></div></div>
 <!-- Taquitos de Maíz de Nixtamal -->
-<div class="bg-white rounded-[20px] p-6 shadow-ambient card-hover transition-all duration-300 flex flex-col"><div class="h-48 rounded-xl overflow-hidden mb-6 image-zoom-container relative"><div class="absolute inset-0 bg-cover bg-center cursor-pointer cursor-zoom-in" style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuCXTwBxgM96cmXJ9zxqi4lRs-M0ij_dD4uHQUWySMa3rDKp81fXhojIw69ZIznt0zFYShdQeI799LvisukmVNyPgXfqNLSai4X9UilvRJtLEAch-QEI0bEXO60GEudCIaRCPKedY-tLPN_GZMTfT_Egfrr2ZUfWU2QiuNDs8XvcW7mz1a2x99AilGQC7gnpw702gd572GZ1_8CspmL_6AA0e9jgd7FCFttgAiv4E49dpWA1KSKUtxePuLB5Otcp8stBVVY&quot;);"></div></div><div class="flex-grow"><h3 class="font-headline-sm text-brand-coffee mb-2">Taquitos de Maíz de Nixtamal</h3><p class="font-body-md text-brand-coffee/70 mb-4">Auténtico proceso de nixtamalización para un sabor y textura inigualables.</p><div class="flex flex-col gap-3 mb-6"><div class="flex items-center justify-between border-b border-brand-coffee/10 pb-2"><span class="font-body-md text-brand-coffee">Media Docena</span><span class="font-headline-sm text-brand-coral">$60</span></div><div class="flex items-center justify-between pb-2"><span class="font-body-md text-brand-coffee">Docena</span><span class="font-headline-sm text-brand-coral">$120</span></div></div></div><div class="flex flex-col gap-2 mt-auto"><button class="inline-flex items-center justify-center bg-brand-coral text-white font-label-md rounded-[12px] py-3 px-4 hover:brightness-110 transition-all gap-2 w-full" onclick="addToCart('Taquitos de Maíz de Nixtamal (Media Docena)', 60)"><span class="material-symbols-outlined text-sm">add_shopping_cart</span>Agregar Media (6)</button><button class="inline-flex items-center justify-center bg-brand-coral text-white font-label-md rounded-[12px] py-3 px-4 hover:brightness-110 transition-all gap-2 w-full" onclick="addToCart('Taquitos de Maíz de Nixtamal (Docena)', 120)"><span class="material-symbols-outlined text-sm">add_shopping_cart</span>Agregar Docena (12)</button></div></div>
+<div class="bg-white rounded-[20px] p-6 shadow-ambient card-hover transition-all duration-300 flex flex-col"><div class="h-48 rounded-xl overflow-hidden mb-6 image-zoom-container relative"><div class="absolute inset-0 bg-cover bg-center cursor-pointer cursor-zoom-in" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCXTwBxgM96cmXJ9zxqi4lRs-M0ij_dD4uHQUWySMa3rDKp81fXhojIw69ZIznt0zFYShdQeI799LvisukmVNyPgXfqNLSai4X9UilvRJtLEAch-QEI0bEXO60GEudCIaRCPKedY-tLPN_GZMTfT_Egfrr2ZUfWU2QiuNDs8XvcW7mz1a2x99AilGQC7gnpw702gd572GZ1_8CspmL_6AA0e9jgd7FCFttgAiv4E49dpWA1KSKUtxePuLB5Otcp8stBVVY");'></div></div><div class="flex-grow"><h3 class="font-headline-sm text-brand-coffee mb-2">Taquitos de Maíz de Nixtamal</h3><p class="font-body-md text-brand-coffee/70 mb-4">Auténtico proceso de nixtamalización para un sabor y textura inigualables.</p><div class="flex flex-col gap-3 mb-6"><div class="flex items-center justify-between border-b border-brand-coffee/10 pb-2"><span class="font-body-md text-brand-coffee">Media Docena</span><span class="font-headline-sm text-brand-coral">$60</span></div><div class="flex items-center justify-between pb-2"><span class="font-body-md text-brand-coffee">Docena</span><span class="font-headline-sm text-brand-coral">$120</span></div></div></div><div class="flex flex-col gap-2 mt-auto"><button class="inline-flex items-center justify-center bg-brand-coral text-white font-label-md rounded-[12px] py-3 px-4 hover:brightness-110 transition-all gap-2 w-full" onclick="addToCart('Taquitos de Maíz de Nixtamal (Media Docena)', 60)"><span class="material-symbols-outlined text-sm">add_shopping_cart</span>Agregar Media (6)</button><button class="inline-flex items-center justify-center bg-brand-coral text-white font-label-md rounded-[12px] py-3 px-4 hover:brightness-110 transition-all gap-2 w-full" onclick="addToCart('Taquitos de Maíz de Nixtamal (Docena)', 120)"><span class="material-symbols-outlined text-sm">add_shopping_cart</span>Agregar Docena (12)</button></div></div>
 <!-- Tacos Dorados -->
 <div class="bg-white rounded-[20px] p-6 shadow-ambient card-hover transition-all duration-300 flex flex-col">
-<div class="h-48 rounded-xl overflow-hidden mb-6 image-zoom-container relative"><div class="absolute inset-0 bg-cover bg-center cursor-pointer cursor-zoom-in" style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuBbTr98v7H8EuwJ1ztlwbN54jf6poEe-KxyR7-3Vj-NuisUtvX96lAklaR8tObuJ3lvWT3UV5AbgK_3Y8vkvT9ilUjXqd8pS_PLiLN1UXuVPW03Mzbav09gV_TX2jrkBHSG8Ige092iGgilToX_u1NRqIM0h2G-z51xGDMQaBo0Kzb3feO4CIQ8V9R_7j0L5gAoEl_H73Pd_4E-lFWijgyUgOAzrldv9a_p-PcYa40MpejUqwnK6W0LVM7e99A8VmDGjGs&quot;);"></div></div>
+<div class="h-48 rounded-xl overflow-hidden mb-6 image-zoom-container relative"><div class="absolute inset-0 bg-cover bg-center cursor-pointer cursor-zoom-in" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBbTr98v7H8EuwJ1ztlwbN54jf6poEe-KxyR7-3Vj-NuisUtvX96lAklaR8tObuJ3lvWT3UV5AbgK_3Y8vkvT9ilUjXqd8pS_PLiLN1UXuVPW03Mzbav09gV_TX2jrkBHSG8Ige092iGgilToX_u1NRqIM0h2G-z51xGDMQaBo0Kzb3feO4CIQ8V9R_7j0L5gAoEl_H73Pd_4E-lFWijgyUgOAzrldv9a_p-PcYa40MpejUqwnK6W0LVM7e99A8VmDGjGs");'></div></div>
 <div class="flex-grow">
 <h3 class="font-headline-sm text-brand-coffee mb-2">Tacos Dorados</h3>
 <p class="font-body-md text-brand-coffee/70 mb-4">Crujientes tacos dorados acompañados de su guarnición clásica, listos para disfrutar.</p>
@@ -371,7 +363,7 @@
 <div>
 <h3 class="font-headline-sm text-brand-coffee mb-2">Nuestra Ubicación</h3>
 <p class="font-body-md text-brand-coffee/70">
-                        Calle Nicolás Bravo #88, Barrio 2,<br>
+                        Calle Nicolás Bravo #88, Barrio 2,<br/>
                         Minas de Barroterán, Coahuila.
                     </p>
 </div>
@@ -398,7 +390,7 @@
 </section><footer class="bg-surface-container-highest dark:bg-inverse-surface w-full py-lg mt-20 relative z-10 pb-24 md:pb-lg">
 <div class="flex flex-col md:flex-row justify-between items-center px-margin-mobile md:px-margin-desktop gap-md max-w-[1280px] mx-auto transition-all duration-300">
 <div class="flex flex-col items-center md:items-start text-center md:text-left">
-<img alt="Taquitos Mayra Logo" class="h-12 w-auto object-contain mb-2" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHiA4jfyZgV-urqlkD1kkx9RAXXvuJPEWYx8fqZtjuVnyLcBDLb9slFDUe8cK0jnXNm78y0RLTFO7Qo57x60rT_No_s58q8XZOJ0qaFdRDnLe7vlRRdERquXDGng2nhC9EobjGaBxKUFD6r-VEbpRVVF_Jlt26YCqj3NZCxzAheezbxaY9MZkkZVeItJITz1FQJfvXIc0A1OjwYbDoTA78ZQn9wI3pG-LjrB42nEiubm74pS_f1vclkDU7UdU3LMY8lo8">
+<img alt="Taquitos Mayra Logo" class="h-12 w-auto object-contain mb-2" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHiA4jfyZgV-urqlkD1kkx9RAXXvuJPEWYx8fqZtjuVnyLcBDLb9slFDUe8cK0jnXNm78y0RLTFO7Qo57x60rT_No_s58q8XZOJ0qaFdRDnLe7vlRRdERquXDGng2nhC9EobjGaBxKUFD6r-VEbpRVVF_Jlt26YCqj3NZCxzAheezbxaY9MZkkZVeItJITz1FQJfvXIc0A1OjwYbDoTA78ZQn9wI3pG-LjrB42nEiubm74pS_f1vclkDU7UdU3LMY8lo8"/>
 <p class="font-body-md text-body-md text-secondary dark:text-secondary-fixed-dim">© 2024 Taquitos Mayra. Calle Nicolás Bravo #88, Barrio 2, Minas de Barroterán, Coahuila.</p>
 </div>
 <!--<div class="flex flex-wrap justify-center gap-6">
@@ -424,17 +416,27 @@
         function toggleCart() {
             const isHidden = cartOverlay.classList.contains('hidden');
             if (isHidden) {
-                cartOverlay.classList.remove('hidden');
-                setTimeout(() => {
-                    cartDrawer.classList.remove('translate-x-full');
-                }, 10);
+                openCart();
             } else {
-                cartDrawer.classList.add('translate-x-full');
-                setTimeout(() => {
-                    cartOverlay.classList.add('hidden');
-                }, 300);
+                closeCart();
             }
+        }
+
+        function openCart() {
+            cartOverlay.classList.remove('hidden', 'opacity-0', 'pointer-events-none');
+            cartOverlay.classList.add('block', 'opacity-100', 'pointer-events-auto');
+            
+            cartDrawer.classList.remove('hidden', 'opacity-0', 'pointer-events-none');
+            cartDrawer.classList.add('flex', 'opacity-100', 'pointer-events-auto');
             renderCart();
+        }
+
+        function closeCart() {
+            cartDrawer.classList.remove('flex', 'opacity-100', 'pointer-events-auto');
+            cartDrawer.classList.add('hidden', 'opacity-0', 'pointer-events-none');
+            
+            cartOverlay.classList.remove('block', 'opacity-100', 'pointer-events-auto');
+            cartOverlay.classList.add('hidden', 'opacity-0', 'pointer-events-none');
         }
 
         function setDeliveryMethod(method) {
@@ -505,13 +507,7 @@
                 cart.push({ name, price, quantity: 1 });
             }
             updateCartBadge();
-            
-            // Open cart drawer feedback
-            cartOverlay.classList.remove('hidden');
-            setTimeout(() => {
-                cartDrawer.classList.remove('translate-x-full');
-            }, 10);
-            renderCart();
+            openCart();
         }
 
         function updateQuantity(name, change) {
@@ -659,46 +655,14 @@
             });
         });
     </script>
-<script class="">
-    function openLightbox(imgUrl) {
-        const lightbox = document.getElementById('image-lightbox');
-        const lightboxImg = document.getElementById('lightbox-img');
-        lightboxImg.src = imgUrl;
-        lightbox.classList.remove('hidden');
-        setTimeout(() => {
-            lightbox.classList.remove('opacity-0');
-        }, 10);
-    }
-
-    function closeLightbox() {
-        const lightbox = document.getElementById('image-lightbox');
-        lightbox.classList.add('opacity-0');
-        setTimeout(() => {
-            lightbox.classList.add('hidden');
-        }, 300);
-    }
-
-    document.addEventListener('DOMContentLoaded', () => {
-        const menuImages = document.querySelectorAll('#menu .image-zoom-container > div');
-        menuImages.forEach(div => {
-            div.addEventListener('click', () => {
-                const style = window.getComputedStyle(div);
-                const url = style.backgroundImage.slice(4, -1).replace(/"/g, "");
-                openLightbox(url);
-            });
-        });
-
-        document.getElementById('image-lightbox').addEventListener('click', (e) => {
-            if (e.target.id === 'image-lightbox') closeLightbox();
-        });
-    });
-</script><!-- Lightbox Modal -->
-<div class="fixed inset-0 z-[100] hidden flex items-center justify-center bg-black/90 backdrop-blur-md transition-opacity duration-300 opacity-0" id="lightbox-modal">
+<!-- Lightbox Modal -->
+<div class="fixed inset-0 z-[110] hidden flex items-center justify-center bg-black/90 backdrop-blur-md transition-opacity duration-300 opacity-0" id="lightbox-modal">
 <button class="absolute top-6 right-6 text-white hover:text-brand-coral transition-colors z-[110]" onclick="closeLightbox()">
 <span class="material-symbols-outlined text-4xl">close</span>
 </button>
 <div class="max-w-[90vw] max-h-[90vh] relative">
-<img alt="Enlarged view" class="max-w-full max-h-[90vh] object-contain rounded-lg shadow-2xl" id="lightbox-img" src="">
+<img alt="Enlarged view" class="max-w-full max-h-[90vh] object-contain rounded-lg shadow-2xl" id="lightbox-img" src=""/>
+<p class="text-white text-center mt-4 font-body-md" id="lightbox-caption"></p>
 </div>
 </div><script class="">
     function openLightbox(src, caption) {
@@ -707,7 +671,7 @@
         const cap = document.getElementById('lightbox-caption');
         
         img.src = src;
-        cap.textContent = caption;
+        cap.textContent = caption || '';
         
         modal.classList.remove('hidden');
         setTimeout(() => {
@@ -736,5 +700,4 @@
         });
     });
 </script>
-
 </body></html>
